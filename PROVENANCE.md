@@ -13,6 +13,10 @@ it moved out of the enip module into this one on 2026-10-11 (with
 pycomm3 interop tests (interop/) were added. They found the defects fixed
 in v0.1.0 (CHANGELOG.md).
 
+On 2026-10-12 (v0.2.0) the adapter code of sim/sim.go moved into the
+enip module's `server` package (copied, then extended there); sim/sim.go
+now holds aliases and the demo tag table.
+
 ## Sources
 
 | Area (files) | Followed |

@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.2.0 (2026-10-12)
+
+Needs enip v0.2.0.
+
+- The adapter moved to the enip module's `server` package; `sim.Server`,
+  `Tag`, `Attr`, `AttrKey` and `Stats` are aliases of its types and
+  `sim.New` builds the same demo tag table on it, so v0.1.0 code builds
+  unchanged. The simulator now also answers tag browsing (the Recipe
+  structure is defined as `RecipeDef`), member access and class 1 I/O.
+
 ## v0.1.0 (2026-10-11)
 
 First release, checked with pycomm3 1.2.16 (see README.md, "Interop

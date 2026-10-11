@@ -10,7 +10,11 @@ Forward Open (class 3), answers Multiple Service Packets, fragmented
 reads and writes and the attribute services, and answers ListIdentity
 on TCP and UDP. Switches make it refuse Forward Open, go silent or
 answer writes with a chosen status, and counters show what a client did.
-It is built on the codecs of [enip](https://github.com/cB-Sigma/enip).
+Since v0.2.0 the controller itself is the adapter role of
+[enip](https://github.com/cB-Sigma/enip) (package `server`), so it also
+serves tag browsing, member access and class 1 assemblies; this module
+keeps the simulator's names, its demo tag table (with the Recipe
+structure defined for browsing) and the command.
 Written for SigmaM2M, a oneM2M platform; it has no dependency on it.
 
 ## What is simulated
