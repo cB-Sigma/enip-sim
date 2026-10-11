@@ -1,0 +1,49 @@
+enip-sim (a simulated Logix controller over EtherNet/IP, in Go)
+Copyright 2026 Abhinav Gautam
+
+This module is licensed under the Apache License, Version 2.0 (LICENSE).
+
+The code was written for SigmaM2M, a oneM2M platform (PROVENANCE.md). It
+contains no code from other projects. The source files that come from
+SigmaM2M (sim/sim.go and the idle-connection and partial-write tests)
+carry no per-file copyright header, the convention of the code they come
+from; the copyright line above covers them. Files added for this module
+carry "Copyright 2026 Abhinav Gautam" and
+"SPDX-License-Identifier: Apache-2.0".
+
+The ODVA CIP Networks Library and Rockwell Automation's Logix 5000 data
+access manual are not redistributed and no text of them is reproduced.
+
+Trademarks
+----------
+
+EtherNet/IP and CIP are trademarks of ODVA, Inc. Logix, ControlLogix and
+CompactLogix are trademarks of Rockwell Automation, Inc. They are used
+here only to say what the simulator imitates. This project is not made,
+affiliated with, sponsored or endorsed by ODVA or Rockwell Automation.
+The default product name is a catalogue-number form chosen to look like
+a controller; it does not identify a real device.
+
+Dependencies
+------------
+
+- github.com/cB-Sigma/enip (Apache-2.0, Copyright 2026 Abhinav Gautam):
+  the codecs the simulator is built on.
+- github.com/cB-Sigma/lanbcast (Apache-2.0, Copyright 2026 Abhinav
+  Gautam), through enip.
+- The Go standard library (BSD-3-Clause, Copyright The Go Authors).
+
+Interop test peer (interop/, not part of the module's packages)
+---------------------------------------------------------------
+
+The nested test-only module interop/ installs pycomm3 1.2.16
+(https://github.com/ottowayi/pycomm3, MIT) from PyPI into a Docker
+container on the tester's machine and runs a small client program of
+ours (interop/peer/client.py, Apache-2.0) with it. No pycomm3 source is
+included in this repository; the image is not distributed.
+
+Test data
+---------
+
+Every tag name, value, serial number, address and product name in this
+module is a made-up demo value.
